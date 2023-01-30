@@ -15,7 +15,7 @@ public class StorageService {
 	
 	public void salvarArquivo(MultipartFile file) throws IOException {
 		byte[] bytes = file.getBytes();
-		Path path = Paths.get("/app/pdfs/"+file.getOriginalFilename());
+		Path path = Paths.get(DIRETORIO+file.getOriginalFilename());
 		Files.write(path, bytes);
 	}
 	
